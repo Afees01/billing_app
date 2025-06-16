@@ -1,3 +1,4 @@
+import 'package:billing_app/view/mainscreen/mainscreen.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -64,7 +65,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    // Navigate to dashboard or home
+                    Navigator.pushReplacementNamed(context, '/dashboard');
                   },
                   child: const Text(
                     'Log In',
@@ -74,7 +75,12 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 12),
                 TextButton(
                   onPressed: () {
-                    // Forgot password action
+                    // Handle forgot password logic here
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                          content: Text(
+                              'Forgot password functionality not implemented')),
+                    );
                   },
                   child: const Text(
                     'Forgot your password?',
